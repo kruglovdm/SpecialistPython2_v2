@@ -8,6 +8,21 @@
 # Пример:
 # Вход
 #
-# 10 1 3 4 3 5 6 7 7 6 1
+# 1 3 4 3 5 6 7 7 6 1
 # Выход
 # 5
+
+results = [1, 3, 4, 3, 5, 6, 7, 7, 6, 1]
+
+results.sort(reverse=True)
+# print(results)
+
+winners_results = set()
+
+for winner_count, result in enumerate(results):
+    winners_results.add(result)
+
+    if len(winners_results) > 3:
+        break
+
+print(winner_count)
